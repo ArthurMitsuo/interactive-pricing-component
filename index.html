@@ -28,17 +28,20 @@
         <section class="container__main">
           <span class="inner-container__prices">
             <div class="pageviews__container">
-              <p class="quantity quantitity-number">100K</p>
+              <p class="quantity quantitity-number"></p>
+              <p class="quantity quantity-letter"></p>
               <p class="quantity">PAGEVIEWS</p>
             </div>
             <div class="price__container">
-              <P class="price">$16.00</P>
-              <P class="month-year">/ month</P>
+              <P class="price">$</P>
+              <P class="price" id="price"></P>
+              <P class="month-year">/</P>
+              <p class="month-year" id="month-year">month</p>
             </div>
           </span>
           
           <div class="container__slider">
-            <input type="range" min="10000" max="1000000" value="505000" id="slider">
+            <input type="range" min="0" max="4" steps="1" value="2" id="slider">
           </div>
           <div class="toggle-switch__container">
             <p>Monthly Billing</p>
@@ -46,8 +49,8 @@
               <input class="checkbox" type="checkbox">
               <span class="checkbox-slider"></span>
             </label>
-            <p>Yearly Billing</p>
-            <h5>25% discount</h5>
+            <p class="yearly">Yearly Billing</p>
+            <!-- <h5 class="discount">25% discount</h5> -->
           </div>
         </section>
         <div class="container__footer">

@@ -5,13 +5,13 @@
     margin-bottom: 40px;
 
     position: relative;
-    left: 9.1rem;
+    left: 11.5rem;
     font-size: 13px;
 }
 .toggle-switch__container > p, label, h5{
     margin-right: 15px;
 }
-.toggle-switch__container > h5{
+.yearly::after {
     color: hsl(15, 100%, 70%);
     background-color: hsl(14, 92%, 95%);
     font-size: 12px;
@@ -20,6 +20,8 @@
     width: 90px;
     height: 20px;
     border-radius: 10px;
+    content: "25% discount";
+    padding-left: 10px;
 }
 
 .checkbox-switch{
@@ -55,12 +57,29 @@
 
     border-radius: 22px;
 }
-
 .checkbox:checked + .checkbox-slider{
     background-color: hsl(174, 86%, 45%);
 }
 .checkbox:checked + .checkbox-slider::before{
     transform: translateX(30px);
     transition: .6s;
+}
+
+@media (max-width:640px){
+    .toggle-switch__container{
+        padding-top: 60px;
+        left: 5rem;
+    }
+    .checkbox-switch{
+        height: 30px;
+    }
+    .yearly::after{
+        content:"-25%";
+        width: 10px;
+    }
+    .toggle-switch__container>p{
+        font-size: 1.2rem;
+    }
+
 }
 
