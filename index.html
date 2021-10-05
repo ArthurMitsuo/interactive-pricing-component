@@ -9,13 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/input-range.css">
+  <link rel="stylesheet" href="./css/input-checkbox-slider.css">
 
   <title>Frontend Mentor | Interactive pricing component</title>
 </head>
 <body>
   <main>
     <section class="container__containter__header">
-      <img src="./images/bg-pattern.svg" alt="" class="bg__img-top">
       <article class="container__header-before">
         <img src="./images/pattern-circles.svg" alt="" class="circles">
         <h1 class="main__title">Simple, traffic-based pricing</h1>
@@ -25,12 +26,28 @@
     <section class="container">
       <article>
         <section class="container__main">
-
+          <span class="inner-container__prices">
+            <div class="pageviews__container">
+              <p class="quantity quantitity-number">100K</p>
+              <p class="quantity">PAGEVIEWS</p>
+            </div>
+            <div class="price__container">
+              <P class="price">$16.00</P>
+              <P class="month-year">/ month</P>
+            </div>
+          </span>
+          
           <div class="container__slider">
-            <input type="range" min="1" max="1000" value="500" class="slider" id="slider">
+            <input type="range" min="10000" max="1000000" value="505000" id="slider">
           </div>
           <div class="toggle-switch__container">
-
+            <p>Monthly Billing</p>
+            <label class="checkbox-switch">
+              <input class="checkbox" type="checkbox">
+              <span class="checkbox-slider"></span>
+            </label>
+            <p>Yearly Billing</p>
+            <h5>25% discount</h5>
           </div>
         </section>
         <div class="container__footer">
@@ -45,4 +62,6 @@
     </section>
   </main>
 </body>
+  <script src="js/sliderRange.js"></script>
+  <script src="js/script.js"></script>
 </html>

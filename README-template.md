@@ -97,11 +97,10 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [StackOverflow](https://stackoverflow.com/questions/51491118/css-how-to-get-screen-height-in-css/51494657) - This helped me to use calc to calculate, sorta, the monitor height.
 - [CSS tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) - This is an amazing article which helped me with display:grid.
 - [StackOverflow](https://stackoverflow.com/questions/22179094/list-style-image-svg-smaller-in-webkit/22179481) - This helped me on placing the check icon ::before the li.
+- [W3 Schools](https://www.w3schools.com/howto/howto_js_rangeslider.asp) - It helped me in making an input type="range".
+- [CSS tricks, Geeks for Geeks](https://css-tricks.com/sliding-nightmare-understanding-range-input/, https://www.geeksforgeeks.org/creating-range-slider-html-using-javascript/) - This helped me understand better the input range and the possibilities within it.
+- [CodePen](https://codepen.io/duplich/pen/qjYQEZ?editors=1010) - This helped me stylize the input range in Chrome.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
