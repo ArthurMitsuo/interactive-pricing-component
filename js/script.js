@@ -1,5 +1,5 @@
 const toggleSwitch = document.querySelector(".checkbox");
-const rangeSlider = document.querySelector("#slider");
+const rangeSlider = document.querySelector(".input-slider");
 
 const pageViewsNumber = document.querySelector(".quantitity-number");
 const priceValue = document.querySelector("#price");
@@ -24,6 +24,7 @@ toggleSwitch.addEventListener("change", ()=>{
 })
 
 rangeSlider.addEventListener('input', ()=>{
+    changeBackground()
     transformRangeValues();
     setTimeout(applyDiscount(), 10);
     
@@ -62,6 +63,15 @@ function transformRangeValues(){
                 letter.textContent = "K";
             }
             
+        }
+    }
+}
+
+function changeBackground(){
+    let valuesPercentage = [0, 25, 50, 75, 100];
+    for(let i=0; i<valuesPercentage.length; i++){
+        if(parseInt(rangeSlider.value) == i){
+            rangeSlider.style.background = "linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) "+valuesPercentage[i]+"%, hsl(224, 65%, 95%) "+valuesPercentage[i]+"%, hsl(224, 65%, 95%) 100%";
         }
     }
 }
