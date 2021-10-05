@@ -14,9 +14,6 @@ This is a solution to the [Interactive pricing component challenge on Frontend M
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -30,15 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+(/design/my-screenshot(desktop version).jpg)
 
 ### Links
 
@@ -47,50 +36,62 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## My process
 
+Started out coding the HTML part and CSS, got way too much time trying to solve the range slide but could understand a lot of things about it. I did the JavaScript part, such as getting the range values and changing the price and pageviews, the slider as well, implementing the 25% discount when checked. For the rangeslider Chrome edition I used an array with the same length as the values of the range slider, matching in percentages for the "progress" bar, when changed, through JavaScript I changed the linear-gradient value of the background for the track.
+Another tricky part was making it responsive, maybe there are some things there aren't aligned, but I did my best.
+
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Raw JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Learned even more about CSS Grid, as well as learned the basics and maybe more about the inputs (range and checkbox slider). Did discover the way the checkbox slider is made and how to customize the range slider, which was really tricky to me.
 
 To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 2.4rem;
+  width: 2.4rem;
+  align-self: center;
+
+  background-image: url("/images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-color: hsl(174, 86%, 45%);
+  border-radius: 25px;
+
+  z-index: 5;
 }
 ```
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+function changeBackground() {
+  let valuesPercentage = [0, 25, 50, 75, 100];
+  for (let i = 0; i < valuesPercentage.length; i++) {
+    if (parseInt(rangeSlider.value) == i) {
+      rangeSlider.style.background =
+        "linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) " +
+        valuesPercentage[i] +
+        "%, hsl(224, 65%, 95%) " +
+        valuesPercentage[i] +
+        "%, hsl(224, 65%, 95%) 100%";
+    }
+  }
+}
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I want to get better at responsive Design as well as begin to code as Mobile First type of programmer. I already knew that, but realized how tricky it can get to make it mobile size when starting as a desktop version.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Want to use more the inputs as well, I'm pretty proud of learning more about them, if you couldn't notice hahaha.
 
 ### Useful resources
 
@@ -100,15 +101,13 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [W3 Schools](https://www.w3schools.com/howto/howto_js_rangeslider.asp) - It helped me in making an input type="range".
 - [CSS tricks, Geeks for Geeks](https://css-tricks.com/sliding-nightmare-understanding-range-input/, https://www.geeksforgeeks.org/creating-range-slider-html-using-javascript/) - This helped me understand better the input range and the possibilities within it.
 - [CodePen](https://codepen.io/duplich/pen/qjYQEZ?editors=1010) - This helped me stylize the input range in Chrome.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Linkedin - [Arthur Mitsuo](https://www.linkedin.com/in/arthur-mitsuo-matsuzaka-ferreira-11b174116/)
+- GitHub - [ArthurMitsuo](https://github.com/ArthurMitsuo)
+- Frontend Mentor - [@ArthurMitsuo](https://www.frontendmentor.io/profile/ArthurMitsuo)
+- Twitter - [@arthur_mitsuo](https://twitter.com/arthur_mitsuo)
 
 ## Acknowledgments
 

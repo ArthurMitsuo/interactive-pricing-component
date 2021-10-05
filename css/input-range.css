@@ -6,7 +6,7 @@
     -webkit-appearance: none;
     width: 85%;
     height: 7px;
-    /* background-color: hsl(224, 65%, 95%); */
+
     background: linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) 50%, hsl(224, 65%, 95%) 51%, hsl(224, 65%, 95%) 100%);
     
     display: inline-block;
@@ -18,9 +18,7 @@
 #slider::-moz-range-progress{
     background-color: hsl(174, 77%, 80%);
 }
-/* #slider::-webkit-slider-runnable-track{
 
-} */
 #slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 2.4rem;
@@ -35,6 +33,10 @@
     border-radius: 25px;  
 
     z-index: 5;  
+}
+#slider::-webkit-slider-thumb:hover{
+    cursor:pointer;
+    background-color: hsl(178, 89%, 45%);
 }
 
 @media (max-width:640px){

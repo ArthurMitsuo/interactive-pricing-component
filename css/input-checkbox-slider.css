@@ -45,6 +45,9 @@
 
     border-radius: 22px;
 }
+.checkbox-slider:hover{
+    cursor: pointer;
+}
 .checkbox-slider::before{
     position: absolute;
     content: '';
